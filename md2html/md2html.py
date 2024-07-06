@@ -21,7 +21,7 @@ def convert(md):
     soup = BeautifulSoup(html, 'html.parser')
     code_blocks = soup.find_all('div', class_='codehilite')
     if len(code_types) != len(code_blocks):
-        raise SystemExit('[!] Error: md2html can not find code blocks.')
+        raise Exception('[!] Error: md2html can not find code blocks.')
     for i, e in enumerate(code_blocks):
         box = CODE_HTML.replace('coding.type', code_types[i])
         new_box = BeautifulSoup(box, 'html.parser').div
