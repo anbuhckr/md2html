@@ -52,3 +52,4 @@ print(html)
 ## Ref
 
 * [python-markdown2](https://github.com/trentm/python-markdown2)
+* [minify-html](https://github.com/wilsonzlin/minify-html)
