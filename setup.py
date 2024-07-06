@@ -19,6 +19,7 @@ with open('md2html/__init__.py', 'rb') as f:
 requirements = [    
     'markdown2>=2.4.13',
     'Pygments>=2.14.0',
+    'minify_html>=0.15.0',
 ]
 
 
