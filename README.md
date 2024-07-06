@@ -43,7 +43,7 @@ $ python3 -m md2html -f input.md -o output.html
 
 import md2html, requests
 
-md = requests.get('https://github.com/anbuhckr/ipscoop/blob/main/README.md').text
+md = requests.get('https://raw.githubusercontent.com/anbuhckr/md2html/main/README.md').text
 html = md2html.convert(md)
 md2html.save(html, 'output.html')
 print(html)
