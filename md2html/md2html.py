@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
 
 import markdown2, re
-from utils import CODE_HTML, JS_HTML, CSS_HTML
+from .utils import CODE_HTML, JS_HTML, CSS_HTML
 from bs4 import BeautifulSoup
 
 def load(fn):
