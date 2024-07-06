@@ -20,25 +20,25 @@ md2html is python library for converting markdown to html with nice code blocks.
 
 To install md2html, simply:
 
-```
+```bash
 $ python3 -m pip install -U git+https://github.com/anbuhckr/md2html.git
 ```
 
 or from source:
 
-```
+```bash
 $ python3 setup.py install
 ```
 
 ## CLI
 
-```
+```bash
 $ python3 -m md2html -f input.md -o output.html
 ```
 
 ## Getting Started
 
-``` python
+```python
 #! /usr/bin/env python3
 
 import md2html, requests
