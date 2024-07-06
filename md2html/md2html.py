@@ -1,6 +1,6 @@
 #! /usr/bin/env python3
 
-import markdown2, re
+import markdown2, re, minify_html
 from .utils import CODE_HTML, JS_HTML, CSS_HTML
 from bs4 import BeautifulSoup
 
@@ -30,4 +30,4 @@ def convert(md):
             code.append(child.extract())
         new_box.append(code)
         e.replace_with(new_box)
-    return f'{css}\n{soup}\n{js}'
+    return minify_html.minify(f'{css}\n{soup}\n{js}', minify_js=True, minify_css=True, remove_processing_instructions=True)
