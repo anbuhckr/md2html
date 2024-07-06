@@ -14,6 +14,9 @@ def save(s, fn):
 
 def convert(md):
     code_types = re.findall(r'```(.*?)(?=\n(?!\n)|\Z)', md)
+    for c in code_types:
+        if not c:
+            md = re.sub(r'```(?=\n(?!\n)|\Z)', '```bash\n', md)
     html = markdown2.markdown(md, extras=['fenced-code-blocks'])
     css = BeautifulSoup(CSS_HTML, 'html.parser').style
     js = BeautifulSoup(JS_HTML, 'html.parser').script
