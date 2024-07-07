@@ -12,16 +12,31 @@ def save(s, fn):
     with open(fn, 'w', encoding='utf-8') as f:
         return f.write(s)
 
+def prettier(s):
+    code_types = []
+    result = ''
+    i = 0
+    for c in s.split('\n'):
+        if c.startswith('```'):
+            i += 1
+            if i == 1 and c == '```':
+                code_types.append(c.replace('```', ''))
+                c = '```bash\n'
+            elif i == 1 and c != '```':
+                code_types.append(c.replace('```', ''))
+                i = 1
+            else:
+                i = 0
+        result += f'{c}\n'
+    return result, code_types
+
 def convert(md):
-    code_types = re.findall(r'```(.*?)(?=\n(?!\n)|\Z)', md)
-    md = re.sub(r'```(?=\n(?!\n)|\Z)', '```bash\n', md)
+    md, code_types = prettier(md)
     html = markdown2.markdown(md, extras=['fenced-code-blocks'])
     css = BeautifulSoup(CSS_HTML, 'html.parser').style
     js = BeautifulSoup(JS_HTML, 'html.parser').script
     soup = BeautifulSoup(html, 'html.parser')
     code_blocks = soup.find_all('div', class_='codehilite')
-    if len(code_types) != len(code_blocks):
-        raise Exception('[!] Error: md2html can not find code blocks.')
     for i, e in enumerate(code_blocks):
         box = CODE_HTML.replace('coding.type', code_types[i])
         new_box = BeautifulSoup(box, 'html.parser').div
