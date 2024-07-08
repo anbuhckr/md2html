@@ -49,7 +49,7 @@ CSS_HTML = '''
 .codehilite-box .h .hp .bt{align-items:center!important;display:flex!important;gap:.25rem!important;cursor:pointer!important;background:#fff0!important;appearance:button!important;-webkit-appearance:button!important;background-image:none!important;text-transform:none!important;font-feature-settings:inherit!important;color:inherit!important;font-family:inherit!important;font-size:100%!important;font-variation-settings:inherit!important;font-weight:inherit!important;letter-spacing:inherit!important;line-height:inherit!important;margin:0!important;padding:0!important;border:0 solid #e3e3e3!important;box-sizing:border-box!important}
 .codehilite-box .codehilite .hll{background-color:#f1fa8c!important}
 .codehilite-box .codehilite{background:#0d0d0d!important;color:#f8f8f2!important;padding:1rem!important}
-.codehilite-box .codehilite pre{background:transparent!important}
+.codehilite-box .codehilite pre{background:transparent!important;color:inherit!important}
 .codehilite-box .codehilite .c{color:#6272a4!important}
 .codehilite-box .codehilite .err{color:#f8f8f2!important}
 .codehilite-box .codehilite .g{color:#f8f8f2!important}
