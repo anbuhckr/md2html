@@ -3,4 +3,4 @@
 from __future__ import unicode_literals
 from .md2html import *
 
-__version__ = '1.0.0'
+__version__ = '1.1.0'
