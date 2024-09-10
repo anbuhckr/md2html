@@ -43,7 +43,7 @@ JS_HTML = f'''
 
 CSS_HTML = '''
 <style>
-.codehilite-box{border-radius:.375rem!important;background:#0d0d0d!important}
+.codehilite-box{border-radius:.375rem!important;background:#0d0d0d!important;margin-bottom:1rem!important}
 .codehilite-box .h{font-size:.75rem!important;line-height:1rem!important;color:#cdcdcd!important;background:#2f2f2f!important;border-top-left-radius:.375rem!important;border-top-right-radius:.375rem!important;padding-bottom:.5rem!important;padding-top:.5rem!important;padding-left:1rem!important;padding-right:1rem!important;justify-content:space-between!important;align-items:center!important;display:flex!important;position:relative!important}
 .codehilite-box .h .hp{align-items:center!important;display:flex!important}
 .codehilite-box .h .hp .bt{align-items:center!important;display:flex!important;gap:.25rem!important;cursor:pointer!important;background:#fff0!important;appearance:button!important;-webkit-appearance:button!important;background-image:none!important;text-transform:none!important;font-feature-settings:inherit!important;color:inherit!important;font-family:inherit!important;font-size:100%!important;font-variation-settings:inherit!important;font-weight:inherit!important;letter-spacing:inherit!important;line-height:inherit!important;margin:0!important;padding:0!important;border:0 solid #e3e3e3!important;box-sizing:border-box!important}
