@@ -105,7 +105,7 @@ def prettier(s):
 
 def convert(md):
     md, code_types = prettier(md)
-    html = markdown2.markdown(md, extras=['fenced-code-blocks'])
+    html = markdown2.markdown(md, extras=['fenced-code-blocks', 'tables', 'wiki-tables'])
     css = BeautifulSoup(CSS_HTML, 'html.parser').style
     js = BeautifulSoup(JS_HTML, 'html.parser').script
     soup = BeautifulSoup(html, 'html.parser')
